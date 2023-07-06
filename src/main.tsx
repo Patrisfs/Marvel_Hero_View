@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Description from './components/Description';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
         element: <Home />
       }
     ]
+  },
+  {
+    path: "/description/:id",
+    element: <Description />
   }
 ])
 
