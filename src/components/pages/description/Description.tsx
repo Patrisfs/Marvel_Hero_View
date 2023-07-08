@@ -1,54 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { GlobalStyle } from '../styles/global';
+import { GlobalStyle } from '../../../styles/global';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import md5 from 'md5';
-import styled from 'styled-components';
+import {Link,Container, Content, CharacterThumbnail, ContentWrapper} from './Description.styled'
 
 const publicKey = 'd723882c93ea079496dfb631b7ebda81';
 const privateKey = '6ab6d502842f519c3cd7dc9212f7c1042c4ffce1';
 const time = Number(new Date());
 const hash = md5(time + privateKey + publicKey);
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: #ffffff;
-  padding: 20px;
-  width: 600px;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-radius: 1%;
-`;
-
-const Link = styled.a`
-  color: #006cb0;
-  padding: 5px 10px;
-  text-decoration: none;
-
-  &:hover {
-    color: #004672;
-  }
-`;
-
-const ContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-right: 20px;
-`;
-
-const Content = styled.div`
-  margin-bottom: 20px;
-  border-bottom: 0.1rem solid #CECECE;
-`;
-const CharacterThumbnail = styled.img`
-  max-width: 200px;
-  height: auto;
-`;
-
 const Description = () => {
-  const { id } = useParams();
+  const { id } = useParams(); //???????
   const [hero, setHero] = useState(null);
   const [comics, setComics] = useState([]);
   const [stories, setStories] = useState([]);
