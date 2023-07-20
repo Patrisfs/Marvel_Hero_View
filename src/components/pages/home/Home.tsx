@@ -29,6 +29,7 @@ const Home = () => {
   return (
   <main>
     <Form onSubmit={handleSubmit}>
+      <p>Marvel Hero</p>
       <Input
         type="text"
         value={characterName}

@@ -17,8 +17,14 @@ export const Form = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  margin: auto;
+  padding: 2px;
+  margin-top: 23px;
+  > p {
+      position: relative;
+      right:10%;
+      color: #fff;
+      font-weight: bolder;
+  }
 `;
 
 export const Input = styled.input`
