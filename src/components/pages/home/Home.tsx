@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
 import { Link } from 'react-router-dom';
-import {Container, Form, Input, Button, List, ListItem, CharacterThumbnail} from './Home.styled'
+import {Container, Form, Input, Button, List, ListItem, CharacterThumbnail, SearchIcon} from './Home.styled'
 
 const publicKey = 'd723882c93ea079496dfb631b7ebda81';
 const privateKey = '6ab6d502842f519c3cd7dc9212f7c1042c4ffce1';
@@ -27,7 +27,7 @@ const Home = () => {
   }
 
   return (
-  <>
+  <main>
     <Form onSubmit={handleSubmit}>
       <Input
         type="text"
@@ -35,8 +35,10 @@ const Home = () => {
         onChange={(e) => setCharacterName(e.target.value)}
         placeholder="Pesquisar por nome"
       />
-      <Button type="submit">Pesquisar</Button>
-    </Form>
+      <Button type ='submit'>
+        <SearchIcon />
+      </Button>
+    </Form> 
     <Container>
       {characters.length > 0 ? (
         <List>
@@ -61,7 +63,7 @@ const Home = () => {
         <p>Nenhum personagem encontrado.</p>
       )}
     </Container>
-  </>
+  </main>
   );
 };
 

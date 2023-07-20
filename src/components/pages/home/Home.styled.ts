@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FaSearch } from 'react-icons/fa';
 
 export const Container = styled.div`
   display: flex;
@@ -6,6 +7,10 @@ export const Container = styled.div`
   width: 1000px;
   margin: auto;
   border-radius: 1%;
+  
+  > p {
+    color: #fff;
+  }
 `;
 
 export const Form = styled.form`
@@ -19,16 +24,22 @@ export const Form = styled.form`
 export const Input = styled.input`
   padding: 10px;
   margin-right: 10px;
+  background-color: #3A3B3D;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+  width: 250px;
+  border: none;
+  box-shadow: -1px 2px 2px 1px #00000096;
 `;
 
-export const Button = styled.button`
-  background-color: #ff0000;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-`;
+export const SearchIcon = styled(FaSearch)`
+  color: #ffff;
+ &:hover{
+  color: black;
+  transition: 0.3s;
+ }
+`
 
 export const List = styled.ul`
   list-style: none;
@@ -37,10 +48,19 @@ export const List = styled.ul`
   flex-wrap: wrap;
 `;
 
+export const Button = styled.button`
+  cursor: pointer;
+  background-color: transparent !important;
+  border: none !important;
+  position: relative;
+  left: -38px;
+  background-color: none;
+ `;
+
 export const ListItem = styled.li`
   margin: 10px;
   padding:15px ;
-  background-color: #1A1A24;
+  background-color: #242527;
   color: white;
   align-items: center;
   text-align: center;
