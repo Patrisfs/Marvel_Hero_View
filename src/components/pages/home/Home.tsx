@@ -4,6 +4,7 @@ import md5 from 'md5';
 import { Link } from 'react-router-dom';
 import {Container, Form, Input, Button, List, ListItem, CharacterThumbnail, SearchIcon, Main} from './Home.styled'
 import Footer from '../Footer';
+import Loading from '../../Loading';
 
 const publicKey = 'd723882c93ea079496dfb631b7ebda81';
 const privateKey = '6ab6d502842f519c3cd7dc9212f7c1042c4ffce1';
@@ -15,16 +16,22 @@ const Home = () => {
   
   const [characterName, setCharacterName] = useState('');
   const [characters, setCharacters] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setIsLoading(true);
       const response = await axios.get(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${characterName}&ts=${time}&apikey=${publicKey}&hash=${hash}`);
 
-      setCharacters(response.data.data.results); 
+      setCharacters(response.data.data.results);
+      setIsLoading(true);
     } catch (error) {
       console.log(error);
     }
+      finally {
+      setIsLoading(false);
+  }
   }
 
   return (
@@ -41,6 +48,7 @@ const Home = () => {
         <SearchIcon />
       </Button>
     </Form> 
+    {isLoading && <Loading />}
     <Container>
         <List>
           {characters.map((character) => (

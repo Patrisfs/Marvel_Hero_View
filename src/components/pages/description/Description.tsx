@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import md5 from 'md5';
 import {Link,Container, Content, CharacterThumbnail, ContentWrapper} from './Description.styled'
+import Loading from '../../Loading';
 
 const publicKey = 'd723882c93ea079496dfb631b7ebda81';
 const privateKey = '6ab6d502842f519c3cd7dc9212f7c1042c4ffce1';
@@ -17,6 +18,7 @@ const Description = () => {
   const [stories, setStories] = useState([]);
   const [events, setEvents] = useState([]);
   const [series, setSeries] = useState([]);
+  const [removeLoading, setRemoveLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,6 +33,8 @@ const Description = () => {
         setStories(character.stories.items);
         setEvents(character.events.items);
         setSeries(character.series.items);
+        setRemoveLoading(true);
+
       } catch (error) {
         console.log(error);
       }
@@ -40,7 +44,7 @@ const Description = () => {
   }, [id]);
 
   if (!hero) {
-    return <p>Carregando...</p>;
+    return <Loading/>
   }
 
   return (
