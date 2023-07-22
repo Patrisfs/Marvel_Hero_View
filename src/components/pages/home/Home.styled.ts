@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa';
 
+
+
+export const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;

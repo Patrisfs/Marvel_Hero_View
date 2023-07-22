@@ -49,6 +49,7 @@ const Description = () => {
       <Container>
         <ContentWrapper>
         <Content>
+          <a href="/">Voltar</a>
           <p>{hero.description}</p>
         </Content>
           <Content>

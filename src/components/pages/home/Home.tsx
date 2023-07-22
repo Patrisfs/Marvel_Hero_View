@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
 import { Link } from 'react-router-dom';
-import {Container, Form, Input, Button, List, ListItem, CharacterThumbnail, SearchIcon} from './Home.styled'
+import {Container, Form, Input, Button, List, ListItem, CharacterThumbnail, SearchIcon, Main} from './Home.styled'
+import Footer from '../Footer';
 
 const publicKey = 'd723882c93ea079496dfb631b7ebda81';
 const privateKey = '6ab6d502842f519c3cd7dc9212f7c1042c4ffce1';
@@ -27,7 +28,7 @@ const Home = () => {
   }
 
   return (
-  <main>
+  <Main>
     <Form onSubmit={handleSubmit}>
       <p>Marvel Hero</p>
       <Input
@@ -41,7 +42,6 @@ const Home = () => {
       </Button>
     </Form> 
     <Container>
-      {characters.length > 0 ? (
         <List>
           {characters.map((character) => (
             <ListItem key={character.id}>
@@ -60,11 +60,9 @@ const Home = () => {
               </ListItem>
           ))}
         </List>
-      ) : (
-        <p>Nenhum personagem encontrado.</p>
-      )}
     </Container>
-  </main>
+    <Footer />
+  </Main>
   );
 };
 
