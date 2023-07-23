@@ -57,7 +57,7 @@ Este é um projeto open-source e qualquer contribuição é bem-vinda. Para cont
 4. Commit suas alterações: `git commit -m "Adicionando nova funcionalidade"`
 5. Envie suas alterações: `git push origin nova-funcionalidade`
 
-Email: Patrick.freitas@engenharia.ufjf.br
+Email: Patrick.freitas@engenharia.ufjf.br <br>
 Conecte comigo pelo [Linkedin](https://www.linkedin.com/in/patrick-freitas-5bb062194/)
 ## Licença
 
