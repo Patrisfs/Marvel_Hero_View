@@ -1,6 +1,6 @@
 # Marvel_Hero_View
 
-Este é um aplicativo web desenvolvido em React para gerenciar seus projetos. Com ele, você pode criar um novo projeto, definir o valor a ser gasto e acompanhar o progresso de sua realização.
+Este é um aplicativo web ultilizando a APi da Marvel, para listar os Hérois, sua história, quadrinhos dentre outras informações sobre sua criação.
 
 ![Título da imagem](https://cdn.discordapp.com/attachments/1012186496251461722/1132749248245534730/image.png)
 
