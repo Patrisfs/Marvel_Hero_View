@@ -1,4 +1,4 @@
-# BudgetTrack
+# Marvel_Hero_View
 
 Este é um aplicativo web desenvolvido em React para gerenciar seus projetos. Com ele, você pode criar um novo projeto, definir o valor a ser gasto e acompanhar o progresso de sua realização.
 
@@ -6,10 +6,9 @@ Este é um aplicativo web desenvolvido em React para gerenciar seus projetos. Co
 
 ## Recursos
 
-- Criar novos projetos
-- Definir valor a ser gasto
-- Acompanhar o progresso do projeto
-- Criar Tarefas para cada projeto
+- Visualizar informações sobre heróis da Marvel.
+- Buscar heróis específicos por nome ou parte do nome.
+- Acompanhar detalhes sobre cada herói, incluindo sua história, poderes, e participações em quadrinhos.
 
 ## Instalação
 
@@ -28,10 +27,23 @@ cd Marvel_Hero_View
 npm install
 ```
 
+3. Inicie o servidor
+```
+npm run dev
+```
 
 ## Uso
 
-Ao abrir o aplicativo, você será direcionado para a tela inicial, onde poderá criar um novo projeto ou ver uma lista de projetos já existentes. Ao clicar em um projeto específico, você poderá ver mais detalhes sobre ele, incluindo o valor a ser gasto e o progresso atual.
+Ao abrir o aplicativo, você será direcionado para a tela inicial, onde poderá visualizar informações sobre heróis da Marvel. Use a barra de pesquisa para buscar heróis específicos por nome ou parte do nome. Ao clicar em um herói específico, você terá acesso a mais detalhes sobre ele, incluindo sua história e participações em quadrinhos.
+
+## Contruido com
+
+[react]() - 
+[Vite]() -
+[Typescript]() - linguagem de programação
+[Axios]()- HTTP Client
+[ESlint]() - Linter
+[Styled-Componentes]() - styles
 
 ## Contribuição
 
