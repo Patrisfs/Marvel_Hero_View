@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { GlobalStyle } from '../../../styles/global';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -11,14 +11,55 @@ const privateKey = '6ab6d502842f519c3cd7dc9212f7c1042c4ffce1';
 const time = Number(new Date());
 const hash = md5(time + privateKey + publicKey);
 
+interface Comic {
+  resourceURI: string;
+  name: string;
+}
+
+interface Story {
+  resourceURI: string;
+  name: string;
+}
+
+interface Event {
+  resourceURI: string;
+  name: string;
+}
+
+interface Serie {
+  resourceURI: string;
+  name: string;
+}
+
+interface Hero {
+  id: number;
+  name: string;
+  description: string;
+  thumbnail: {
+    path: string;
+    extension: string;
+  };
+  comics: {
+    items: Comic[];
+  };
+  stories: {
+    items: Story[];
+  };
+  events: {
+    items: Event[];
+  };
+  series: {
+    items: Serie[];
+  };
+}
+
 const Description = () => {
-  const { id } = useParams(); //???????
-  const [hero, setHero] = useState(null);
-  const [comics, setComics] = useState([]);
-  const [stories, setStories] = useState([]);
-  const [events, setEvents] = useState([]);
-  const [series, setSeries] = useState([]);
-  const [removeLoading, setRemoveLoading] = useState(false);
+  const { id } = useParams();
+  const [hero, setHero] = useState<Hero | null>(null);
+  const [comics, setComics] = useState<Comic[]>([]);
+  const [stories, setStories] = useState<Story[]>([]);
+  const [events, setEvents] = useState<Event[]>([]);
+  const [series, setSeries] = useState<Serie[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,7 +74,6 @@ const Description = () => {
         setStories(character.stories.items);
         setEvents(character.events.items);
         setSeries(character.series.items);
-        setRemoveLoading(true);
 
       } catch (error) {
         console.log(error);

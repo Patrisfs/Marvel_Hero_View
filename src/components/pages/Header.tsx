@@ -1,4 +1,3 @@
-import React from 'react';
 import cityImage from '../../assets/city.jpg';
 import styled from 'styled-components';
 

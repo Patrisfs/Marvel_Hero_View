@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
 import { Link } from 'react-router-dom';
@@ -11,14 +11,23 @@ const privateKey = '6ab6d502842f519c3cd7dc9212f7c1042c4ffce1';
 const time = Number(new Date());
 const hash = md5(time + privateKey + publicKey);
 
+interface Character {
+  id: number;
+  name: string;
+  thumbnail:{
+    path: string;
+    extension: string;
+  }
+}
+
 
 const Home = () => {
   
   const [characterName, setCharacterName] = useState('');
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState<Character[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       setIsLoading(true);
@@ -41,7 +50,7 @@ const Home = () => {
       <Input
         type="text"
         value={characterName}
-        onChange={(e) => setCharacterName(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCharacterName(e.target.value)}
         placeholder="Pesquisar por nome"
       />
       <Button type ='submit'>
