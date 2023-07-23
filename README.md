@@ -12,7 +12,7 @@ Este é um aplicativo web ultilizando a APi da Marvel, para listar os Hérois, s
 
 ## Instalação
 
-você ppode acessar o projeto [aqui](https://github.com/Patrisfs/Marvel_Hero_View).
+você ppode acessar o projeto [aqui](https://marvel-heros-app.netlify.app/).
 
 
 1. Clone este repositório:
