@@ -12,7 +12,7 @@ Este é um aplicativo web desenvolvido em React para gerenciar seus projetos. Co
 
 ## Instalação
 
-você ppode acessar o projeto or [aqui](https://github.com/Patrisfs/Marvel_Hero_View).
+você ppode acessar o projeto [aqui](https://github.com/Patrisfs/Marvel_Hero_View).
 
 
 1. Clone este repositório:
@@ -44,6 +44,7 @@ Ao abrir o aplicativo, você será direcionado para a tela inicial, onde poderá
 - [Axios](https://axios-http.com/) - Cliente HTTP para fazer requisições à API da Marvel.
 - [ESlint](https://eslint.org/) - Linter para ajudar a manter a qualidade do código.
 - [Styled-Componentes](https://styled-components.com/) - Biblioteca para estilização dos componentes.
+- [Api-marvel](https://developer.marvel.com/documentation/getting_started) - Api para requisição dos Hérois
 
 
 ## Contribuição
@@ -56,6 +57,8 @@ Este é um projeto open-source e qualquer contribuição é bem-vinda. Para cont
 4. Commit suas alterações: `git commit -m "Adicionando nova funcionalidade"`
 5. Envie suas alterações: `git push origin nova-funcionalidade`
 
+Email: Patrick.freitas@engenharia.ufjf.br
+Conecte comigo pelo [Linkedin](https://www.linkedin.com/in/patrick-freitas-5bb062194/)
 ## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais informações.
