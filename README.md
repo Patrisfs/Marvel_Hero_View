@@ -36,14 +36,15 @@ npm run dev
 
 Ao abrir o aplicativo, você será direcionado para a tela inicial, onde poderá visualizar informações sobre heróis da Marvel. Use a barra de pesquisa para buscar heróis específicos por nome ou parte do nome. Ao clicar em um herói específico, você terá acesso a mais detalhes sobre ele, incluindo sua história e participações em quadrinhos.
 
-## Contruido com
+## Construído com
 
-[react]() - 
-[Vite]() -
-[Typescript]() - linguagem de programação
-[Axios]()- HTTP Client
-[ESlint]() - Linter
-[Styled-Componentes]() - styles
+- [React](https://reactjs.org/) - Biblioteca JavaScript para criar interfaces de usuário.
+- [Vite](https://vitejs.dev/) - Build tool e servidor de desenvolvimento para projetos em JavaScript/TypeScript.
+- [TypeScript](https://www.typescriptlang.org/) - Linguagem de programação.
+- [Axios](https://axios-http.com/) - Cliente HTTP para fazer requisições à API da Marvel.
+- [ESlint](https://eslint.org/) - Linter para ajudar a manter a qualidade do código.
+- [Styled-Componentes](https://styled-components.com/) - Biblioteca para estilização dos componentes.
+
 
 ## Contribuição
 
